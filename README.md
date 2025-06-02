@@ -1,10 +1,6 @@
-## Spring Microservices in Action - Second Edition. Chapter 12
+## Spring Microservices in Action - Second Edition.
 
 # Introduction
-Welcome to Spring Microservices in Action, Chapter 12.  Chapter 12 is almost the end of the book and demonstrates how to create a build and deployment pipeline.  We walkthrough how to build this pipeline and then deploy all of the services to Amazon's Elastic Kubernetes Service (EKS). 
-
-By the time you are done reading this chapter you will be able to build and/or deploy:
-
 1. A Spring Cloud based OAuth2 authentication service that can issue and validate JWT tokens.  
 2. A Spring Cloud Config server that is deployed as Docker container and can manage a services configuration information using a file system or GitHub-based repository.
 3. A Eureka server running as a Spring-Cloud based service. This service will allow multiple service instances to register with it. Clients that need to call a service will use Eureka to lookup the physical location of the target service.
@@ -17,14 +13,14 @@ By the time you are done reading this chapter you will be able to build and/or d
 9. A set of ELK Stack applications (Elasticsearch, Logstash, Kibana)
 10.A Zipkin Server
 
-Our PostgreSQL database and Redis service have now been moved to Amazon services.
+PostgreSQL database and Redis service have now been moved to Amazon services.
 
 You can find all of the service.yaml and deployment.yaml files in the AWS folder. Also all the required configuration to create the ELK stack EC2 instance.
 
 ## Initial Configuration
-1.	Apache Maven (http://maven.apache.org)  All of the code examples in this book have been compiled with Java version 12.
+1.	Apache Maven (http://maven.apache.org)  All of the code examples have been compiled with Java version 12.
 2.	Git Client (http://git-scm.com)
-3.  Docker(https://www.docker.com/products/docker-desktop)
+3. Docker(https://www.docker.com/products/docker-desktop)
 
 
 ## How To Use
@@ -33,17 +29,13 @@ To clone and run this application, you'll need [Git](https://git-scm.com), [Mave
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/ihuaylupo/manning-smia
+$ git clone https://github.com/ravisankargv96/Microservices-In-Action/
 
-# Go into the repository, by changing to the directory where you have downloaded the 
-# Chapter 12 source code and select whether you want the initial or final configuration
-$ cd chapter12
-
-# To build the code examples for Chapter 12 as a docker image, open a command-line 
+# To build the code examples as a docker image, open a command-line 
 # window and execute the following command:
 $ mvn clean package dockerfile:build
 
-# Now we are going to use docker-compose to start the actual image.  To start the docker image, stay in the directory containing  your Chapter 12 source code and  Run the following command: 
+# Now we are going to use docker-compose to start the actual image. To start the docker image, stay in the directory containing source code and  Run the following command: 
 $ docker-compose -f docker/docker-compose.yml up
 ```
 
@@ -61,10 +53,3 @@ If everything starts correctly you should see a bunch of Spring Boot information
 
 # Database
 You can find the database script as well in the docker directory.
-
-## Contact
-
-I'd like you to send me an email on <illaryhs@gmail.com> about anything you'd want to say about this software.
-
-### Contributing
-Feel free to file an issue if it doesn't work for your code sample. Thanks.
